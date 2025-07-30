@@ -1,4 +1,4 @@
-# Primeiro Projeto em Java
+# Hello World
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/ESousa97/DesafioJava1?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ESousa97/DesafioJava1?style=for-the-badge)
