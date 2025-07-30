@@ -48,10 +48,10 @@ Projeto Java inicial que implementa exercícios básicos, incluindo saudações 
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd DesafioJava1/
+   cd primeiroprojetoj/
    ```
 
-3. Abra o projeto `primeiroprojetoJ` em sua IDE Java (ex: IntelliJ IDEA)
+3. Abra o projeto `src` ou `src/main` em sua IDE Java (ex: IntelliJ IDEA)
 
 4. Nenhuma configuração adicional de dependências é necessária além do JDK
 
@@ -85,7 +85,6 @@ primeiroprojetoj/
 ├── assets
 |     └── Desafios.png
 ├── README.md
-├── primeiroprojetoJ.iml
 └── src/
     ├── Main.java                    # Hello World básico
     └── main
