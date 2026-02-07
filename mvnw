@@ -88,7 +88,7 @@ fi
 
 # Provide a "standardized" way to retrieve the CLI args that will
 # work with both Windows and non-Windows executions.
-MAVEN_CMD_LINE_ARGS="$@"
+MAVEN_CMD_LINE_ARGS="$*"
 export MAVEN_CMD_LINE_ARGS
 
 exec "$JAVACMD" \
