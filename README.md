@@ -3,7 +3,7 @@
 > Aplicação de console interativa para aprendizado de conceitos fundamentais de Java.
 
 ![Build](https://github.com/ESousa97/primeiroprojetoJ/actions/workflows/ci.yml/badge.svg)
-[![CodeFactor](https://www.codefactor.io/repository/github/esousa97/primeiroprojeto/badge)](https://www.codefactor.io/repository/github/esousa97/primeiroprojeto)
+[![CodeFactor](https://www.codefactor.io/repository/github/esousa97/primeiroprojetoj/badge)](https://www.codefactor.io/repository/github/esousa97/primeiroprojetoj)
 ![Java](https://img.shields.io/badge/Java-17+-blue?logo=openjdk)
 ![License](https://img.shields.io/github/license/ESousa97/primeiroprojetoJ)
 ![Last Commit](https://img.shields.io/github/last-commit/ESousa97/primeiroprojetoJ)
