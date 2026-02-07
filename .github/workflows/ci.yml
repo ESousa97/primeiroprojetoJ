@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload JAR
         if: matrix.java-version == 17
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: sistema-interativo-jar
           path: target/*.jar
