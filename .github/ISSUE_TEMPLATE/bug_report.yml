@@ -1,0 +1,74 @@
+name: Bug report
+description: Reporte um problema reproduzível no Sistema Interativo Java.
+title: "[bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um bug. Preencha os campos abaixo com o máximo de contexto.
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo
+      description: Descreva o problema em uma frase.
+      placeholder: Ao escolher a opção 4, a aplicação encerra com erro...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos exatos para reproduzir o comportamento.
+      placeholder: |
+        1. Execute `mvnw.cmd exec:java -Dexec.mainClass=com.esousa.interativo.SistemaInterativo`
+        2. Escolha a opção 4
+        3. Informe 10 e 0
+        4. Observe...
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Comportamento atual
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operacional
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: java_version
+    attributes:
+      label: Versão do Java
+      placeholder: 17.0.16
+    validations:
+      required: true
+  - type: input
+    id: maven_version
+    attributes:
+      label: Versão do Maven
+      placeholder: 3.9.6
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs e evidências
+      description: Cole stack trace, saída do terminal ou anexos relevantes.
+      render: text

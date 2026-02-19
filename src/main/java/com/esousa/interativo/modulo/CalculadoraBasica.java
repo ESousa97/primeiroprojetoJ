@@ -10,6 +10,12 @@ import com.esousa.interativo.util.ConsoleUtils;
  */
 public final class CalculadoraBasica {
 
+    private static final int OPCAO_SOMA = 1;
+    private static final int OPCAO_SUBTRACAO = 2;
+    private static final int OPCAO_MULTIPLICACAO = 3;
+    private static final int OPCAO_DIVISAO = 4;
+    private static final int OPCAO_PREDEFINIDAS = 5;
+
     private CalculadoraBasica() {
         // Classe utilitária
     }
@@ -27,9 +33,9 @@ public final class CalculadoraBasica {
         System.out.println("4 - Divisão");
         System.out.println("5 - Operações pré-definidas");
 
-        int opcao = ConsoleUtils.lerInteiro("Opção (1-5): ", 1, 5);
+        int opcao = ConsoleUtils.lerInteiro("Opção (1-5): ", OPCAO_SOMA, OPCAO_PREDEFINIDAS);
 
-        if (opcao == 5) {
+        if (opcao == OPCAO_PREDEFINIDAS) {
             exibirOperacoesPredefinidas();
         } else {
             realizarOperacaoInterativa(opcao);
@@ -49,10 +55,10 @@ public final class CalculadoraBasica {
      */
     public static double calcular(double a, double b, int operacao) {
         return switch (operacao) {
-            case 1 -> a + b;
-            case 2 -> a - b;
-            case 3 -> a * b;
-            case 4 -> {
+            case OPCAO_SOMA -> a + b;
+            case OPCAO_SUBTRACAO -> a - b;
+            case OPCAO_MULTIPLICACAO -> a * b;
+            case OPCAO_DIVISAO -> {
                 if (b == 0) {
                     throw new ArithmeticException("Divisão por zero não é permitida");
                 }
@@ -70,10 +76,10 @@ public final class CalculadoraBasica {
      */
     public static String getOperador(int operacao) {
         return switch (operacao) {
-            case 1 -> "+";
-            case 2 -> "-";
-            case 3 -> "*";
-            case 4 -> "/";
+            case OPCAO_SOMA -> "+";
+            case OPCAO_SUBTRACAO -> "-";
+            case OPCAO_MULTIPLICACAO -> "*";
+            case OPCAO_DIVISAO -> "/";
             default -> "?";
         };
     }
@@ -94,9 +100,9 @@ public final class CalculadoraBasica {
 
     private static void exibirOperacoesPredefinidas() {
         System.out.println("\nOperações básicas pré-definidas:");
-        System.out.printf("Soma:          10 + 5 = %.0f%n", calcular(10, 5, 1));
-        System.out.printf("Subtração:     10 - 5 = %.0f%n", calcular(10, 5, 2));
-        System.out.printf("Multiplicação: 10 * 5 = %.0f%n", calcular(10, 5, 3));
-        System.out.printf("Divisão:       10 / 5 = %.1f%n", calcular(10, 5, 4));
+        System.out.printf("Soma:          10 + 5 = %.0f%n", calcular(10, 5, OPCAO_SOMA));
+        System.out.printf("Subtração:     10 - 5 = %.0f%n", calcular(10, 5, OPCAO_SUBTRACAO));
+        System.out.printf("Multiplicação: 10 * 5 = %.0f%n", calcular(10, 5, OPCAO_MULTIPLICACAO));
+        System.out.printf("Divisão:       10 / 5 = %.1f%n", calcular(10, 5, OPCAO_DIVISAO));
     }
 }

@@ -31,4 +31,11 @@ class PerfilInterativoTest {
         assertNotNull(PerfilInterativo.gerarMensagemIdade(1));
         assertNotNull(PerfilInterativo.gerarMensagemIdade(100));
     }
+
+    @Test
+    @DisplayName("idade inválida deve lançar IllegalArgumentException")
+    void deveLancarErroParaIdadeInvalida() {
+        assertThrows(IllegalArgumentException.class, () -> PerfilInterativo.gerarMensagemIdade(0));
+        assertThrows(IllegalArgumentException.class, () -> PerfilInterativo.gerarMensagemIdade(150));
+    }
 }

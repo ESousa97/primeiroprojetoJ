@@ -1,16 +1,32 @@
-# ===== Build =====
+# ===== Build outputs =====
 target/
+out/
 *.class
 *.jar
 *.war
+*.ear
+
+# ===== Coverage / reports =====
+coverage/
+site/
+dependency-check-report.*
+
+# ===== Dependency and caches =====
+.m2/repository/
+.gradle/
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Environment =====
+.env
+.env.local
+.env.*.local
 
 # ===== IDE =====
-# IntelliJ IDEA
 .idea/
 *.iml
-out/
-
-# Eclipse
 .classpath
 .project
 .settings/
@@ -19,16 +35,16 @@ out/
 .springBeans
 .sts4-cache
 bin/
-
-# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+.vscode/settings.json
 
-# VS Code
-.vscode/
+# ===== Editor lockfiles =====
+*.swp
+*.swo
 
 # ===== OS =====
 .DS_Store

@@ -1,5 +1,6 @@
 package com.esousa.interativo.modulo;
 
+import com.esousa.interativo.config.ApplicationConstants;
 import com.esousa.interativo.util.ConsoleUtils;
 
 /**
@@ -23,7 +24,7 @@ public final class HelloWorld {
         String nome = ConsoleUtils.lerLinha(
                 "Digite seu nome (ou pressione Enter para usar 'Mundo'): ");
         if (nome.isEmpty()) {
-            nome = "Mundo";
+            nome = ApplicationConstants.NOME_PADRAO;
         }
 
         System.out.println("\nEscolha o tipo de saudação:");
@@ -47,15 +48,19 @@ public final class HelloWorld {
      * @return texto da saudação
      */
     public static String gerarSaudacao(String nome, int tipo) {
+        String nomeSeguro = (nome == null || nome.isBlank())
+            ? ApplicationConstants.NOME_PADRAO
+            : nome.trim();
+
         return switch (tipo) {
-            case 1 -> "Olá, " + nome + "!";
-            case 2 -> "Seja bem-vindo(a), " + nome + ". É um prazer tê-lo(a) aqui!";
-            case 3 -> "E aí, " + nome + "! Tudo bem?";
+            case 1 -> "Olá, " + nomeSeguro + "!";
+            case 2 -> "Seja bem-vindo(a), " + nomeSeguro + ". É um prazer tê-lo(a) aqui!";
+            case 3 -> "E aí, " + nomeSeguro + "! Tudo bem?";
             case 4 -> String.join("\n",
-                    "Olá, " + nome + "!",
-                    "Seja bem-vindo(a), " + nome + ". É um prazer tê-lo(a) aqui!",
-                    "E aí, " + nome + "! Tudo bem?");
-            default -> "Olá, " + nome + "!";
+                "Olá, " + nomeSeguro + "!",
+                "Seja bem-vindo(a), " + nomeSeguro + ". É um prazer tê-lo(a) aqui!",
+                "E aí, " + nomeSeguro + "! Tudo bem?");
+            default -> "Olá, " + nomeSeguro + "!";
         };
     }
 }

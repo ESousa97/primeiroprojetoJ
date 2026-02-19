@@ -32,7 +32,10 @@ Este Código de Conduta se aplica dentro dos espaços do projeto e em espaços p
 
 ## Aplicação
 
-Instâncias de comportamento abusivo, de assédio ou de outra forma inaceitável podem ser reportadas através das [Issues do projeto](https://github.com/ESousa97/primeiroprojetoJ/issues).
+Instâncias de comportamento abusivo, de assédio ou de outra forma inaceitável podem ser reportadas para:
+
+- GitHub: https://github.com/ESousa97
+- LinkedIn: https://www.linkedin.com/in/enoque-sousa-bb89aa168/
 
 Todas as reclamações serão revisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada às circunstâncias.
 

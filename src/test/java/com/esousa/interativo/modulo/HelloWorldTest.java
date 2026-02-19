@@ -48,6 +48,12 @@ class HelloWorldTest {
     }
 
     @Test
+    @DisplayName("nome nulo usa fallback 'Mundo'")
+    void deveUsarFallbackParaNomeNulo() {
+        assertEquals("Olá, Mundo!", HelloWorld.gerarSaudacao(null, 1));
+    }
+
+    @Test
     @DisplayName("tipo desconhecido usa saudação clássica como fallback")
     void deveUsarFallbackParaTipoDesconhecido() {
         String resultado = HelloWorld.gerarSaudacao("X", 99);

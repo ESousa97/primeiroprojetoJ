@@ -1,5 +1,7 @@
 package com.esousa.interativo.util;
 
+import com.esousa.interativo.config.ApplicationConstants;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -64,20 +66,7 @@ public final class ConsoleUtils {
      * @return inteiro positivo válido
      */
     public static int lerIdade(String prompt) {
-        while (true) {
-            try {
-                System.out.print(prompt);
-                int idade = SCANNER.nextInt();
-                SCANNER.nextLine();
-                if (idade > 0 && idade < 150) {
-                    return idade;
-                }
-                System.out.print("Idade inválida! Digite uma idade válida: ");
-            } catch (InputMismatchException e) {
-                System.out.print("Digite apenas números para a idade: ");
-                SCANNER.nextLine();
-            }
-        }
+        return lerInteiro(prompt, ApplicationConstants.MIN_IDADE, ApplicationConstants.MAX_IDADE);
     }
 
     /**

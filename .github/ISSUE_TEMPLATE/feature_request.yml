@@ -1,0 +1,40 @@
+name: Feature request
+description: Sugira uma melhoria para o projeto.
+title: "[feat]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma melhoria. Explique claramente o problema e a proposta.
+  - type: input
+    id: problem
+    attributes:
+      label: Problema
+      description: Qual problema real esta funcionalidade resolve?
+      placeholder: O módulo de estudos não permite persistir anotações entre execuções.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta de solução
+      description: Descreva a solução desejada.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Liste abordagens alternativas e por que não foram escolhidas.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      description: Como validar que a feature está completa?
+      placeholder: |
+        - [ ] Critério 1
+        - [ ] Critério 2
+    validations:
+      required: true

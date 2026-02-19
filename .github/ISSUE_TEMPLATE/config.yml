@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Segurança (divulgação responsável)
+    url: https://github.com/ESousa97/primeiroprojetoJ/security/policy
+    about: Use este canal para relatar vulnerabilidades de segurança.

@@ -1,5 +1,6 @@
 package com.esousa.interativo.modulo;
 
+import com.esousa.interativo.config.ApplicationConstants;
 import com.esousa.interativo.util.ConsoleUtils;
 
 /**
@@ -56,6 +57,10 @@ public final class PerfilInterativo {
      * @return mensagem personalizada
      */
     public static String gerarMensagemIdade(int idade) {
+        if (idade < ApplicationConstants.MIN_IDADE || idade > ApplicationConstants.MAX_IDADE) {
+            throw new IllegalArgumentException("Idade fora da faixa suportada: " + idade);
+        }
+
         if (idade < 18) {
             return "Você é jovem e tem muito potencial pela frente.";
         } else if (idade < 65) {
