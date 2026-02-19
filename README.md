@@ -2,7 +2,7 @@
 
 # Sistema Interativo Java
 
-[![CI](https://img.shields.io/github/actions/workflow/status/ESousa97/primeiroprojetoJ/ci.yml?branch=main&style=flat&logo=github-actions&logoColor=white)](https://github.com/ESousa97/primeiroprojetoJ/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/ESousa97/primeiroprojetoJ/ci.yml?branch=master&style=flat&logo=github-actions&logoColor=white)](https://github.com/ESousa97/primeiroprojetoJ/actions/workflows/ci.yml)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/ESousa97/primeiroprojetoj?style=flat&logo=codefactor&logoColor=white)](https://www.codefactor.io/repository/github/esousa97/primeiroprojetoj)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
 [![Status](https://img.shields.io/badge/Status-Archived-lightgrey.svg?style=flat&logo=archive&logoColor=white)](#)
